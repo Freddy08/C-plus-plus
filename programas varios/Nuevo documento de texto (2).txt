@@ -1,0 +1,30 @@
+	struct
+					{
+						int clave;
+						char nombre[100];
+						float precio;
+					}modificacion;
+					int claveb;
+					printf("Dame la clave a modificar: ");
+					scanf("%d",&claveb);
+					pf=fopen("cpp:\\freeddy menu del profesro bernardo\\datos productos.dat","rb+");					
+					fseek(pf,(long)(claveb)*sizeof(modificacion),0);
+					fread(&modificacion,sizeof(modificacion),1,pf);
+					printf("%s ",&modificacion.nombre);
+					printf("%f",&modificacion.precio);
+					printf("\n");
+					getchar();
+					printf("Dame el nuevo nombre: ");
+					gets(modificacion.nombre);
+					printf("Dame el nuevo precio: ");
+					scanf("%f",&modificacion.precio);
+					fseek(pf,(long)(claveb)*sizeof(modificacion),0);
+					fwrite(&modificacion,sizeof(modificacion),1,pf);
+					printf("Archivo guardandose\n");
+					getch();
+					printf("Registro modificado exitosamente");
+					fclose(pf);
+					getchar();
+					getchar();
+					goto et4;
+				}

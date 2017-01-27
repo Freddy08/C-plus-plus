@@ -1,0 +1,25 @@
+/*Clasificacion de triangulos*/
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+main()
+{
+	int l1,l2,l3;
+	system("cls");
+	printf("Clasifica un triangulo\n\n");
+	printf("Escriba los lados del triangulo: ");
+	scanf("%d %d %d",&l1,&l2,&l3);
+	printf("\n");
+	if(l1 == l2 && l2 == l3)
+	{
+		printf("El triangulo es equilatero");
+	}else if(l2 == l3 || l2 == l3 || l3 == l1);
+	{
+		printf("El triangulo es Isosceles");
+	}else
+	{
+		printf("El triangulo es Escaleno");
+	}
+	getch();
+	return 0;
+}
